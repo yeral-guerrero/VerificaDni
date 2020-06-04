@@ -97,9 +97,9 @@
             <p>Nombre del usuario</p>
             <input type="text" id="nombre" placeholder="Nombre del Usuario">
             <p>Numeros (8 ditos exactamente)</p>
-            <input type="number" id="dni_numero" placeholder="Numero 8 digitos">
+            <input type="number" id="dni_numero" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="Numero 8 digitos">
             <p>Letra (solamente 1 letra)</p>
-            <input type="text" id="dni_letra" placeholder="Letra final del DNI"> <br><br><br><br>
+            <input type="text" id="dni_letra" maxlength="1" onKeyUp="this.value=this.value.toUpperCase();"  oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  placeholder="Letra final del DNI"> <br><br><br><br>
             <button id="verifica">Verificar</button>
             <script type="text/javascript" src="js/verificadni.js"></script>
 
